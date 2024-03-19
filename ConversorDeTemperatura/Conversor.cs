@@ -37,7 +37,14 @@ namespace ConversorDeTemperatura
 
         private void btnConverter_Click(object sender, EventArgs e)
         {
-            double value = Convert.ToDouble(txtTemperatura.Text);
+            double value;
+            if (!double.TryParse(txtTemperatura.Text, out value))
+            {
+                MessageBox.Show("Por favor, insira um valor numérico válido na temperatura.", "Erro de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            value = Convert.ToDouble(txtTemperatura.Text);
             double result = 0;
             string unit1 = cmbEntrada.Text;
             string unit2 = cmbSaida.Text;
