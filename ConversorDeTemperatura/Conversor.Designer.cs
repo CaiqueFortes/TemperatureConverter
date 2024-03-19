@@ -34,6 +34,7 @@
             this.cmbSaida = new System.Windows.Forms.ComboBox();
             this.btnConverter = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
+            this.lblTexto = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -89,11 +90,21 @@
             this.lblResultado.TabIndex = 6;
             this.lblResultado.Text = "0";
             // 
+            // lblTexto
+            // 
+            this.lblTexto.AutoSize = true;
+            this.lblTexto.Location = new System.Drawing.Point(12, 22);
+            this.lblTexto.Name = "lblTexto";
+            this.lblTexto.Size = new System.Drawing.Size(102, 13);
+            this.lblTexto.TabIndex = 7;
+            this.lblTexto.Text = "Digite a temperatura";
+            // 
             // Conversor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 144);
+            this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnConverter);
             this.Controls.Add(this.cmbSaida);
@@ -117,6 +128,7 @@
         private System.Windows.Forms.ComboBox cmbSaida;
         private System.Windows.Forms.Button btnConverter;
         private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Label lblTexto;
     }
 }
 
